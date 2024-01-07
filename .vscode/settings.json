@@ -1,0 +1,7 @@
+{
+	"idf.adapterTargetName": "esp8266",
+	"files.associations": {
+		"oled.h": "c",
+		"cstdint": "c"
+	}
+}
