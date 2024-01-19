@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
@@ -94,14 +95,9 @@ void app_main()
 	Oled_Inicializa();
 
 	gpio_set_direction(PIN_P, GPIO_MODE_OUTPUT);
-	//printf("Prueba de OLED\n");
-
-	//Oled_ColocaBuffer(tcb_b, 1024);
-	//Oled_Dibuja();
 
 	while(1)
 	{
-		//printf("*** Inicio con ESP8266 ***\n");
 		Oled_LimpiaDisplay();
 		Oled_EnviaCadenaXY("TECNOLOGIA", 0, 0);
 		Oled_EnviaCadenaXY("COLMILLO", 1, 0);
@@ -113,7 +109,7 @@ void app_main()
 		Oled_Dibuja();
 		gpio_set_level(PIN_P,0);
 		vTaskDelay(200);
-		//printf("*** Fin con ESP8266 ***\n");
+
 		Oled_LimpiaDisplay();
 		Oled_EnviaCadenaXY("TECNOLOGIA", 3, 3);
 		Oled_EnviaCadenaXY("COLMILLO", 4, 4);

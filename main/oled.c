@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
 
 #include "esp_log.h"
 #include "esp_system.h"
