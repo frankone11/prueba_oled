@@ -4,6 +4,7 @@
 #
 
 PROJECT_NAME := prueba-oled
+IDF_PATH := /home/paco/esp/ESP8266_RTOS_SDK
 
 include $(IDF_PATH)/make/project.mk
 
